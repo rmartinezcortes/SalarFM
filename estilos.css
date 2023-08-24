@@ -1,0 +1,53 @@
+.navbar{
+    height: 100px;
+    background-color: rgb(23, 155, 153);
+}
+
+.navbar-brand img{
+    height: 60px;
+
+}
+.nav-link{
+    color: yellow !important
+}
+.jumbotron{
+    height: 400px;
+    width: 100%;
+    background-image: url(img/pexels-andré-ulysses-de-salis-3727271.jpg);
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    color: aliceblue;
+}
+.jumbotron p{
+    color: aliceblue;
+}
+h2{
+    text-align: center;
+    background-color: rgb(23, 155, 153);
+    color: yellow;
+    padding: 20px;
+    margin-bottom: 0%;
+
+
+}
+.nleft{
+    height: 400px;
+    background-image: url(img/flamingo-4497673_1280.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.program{
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+@media only screen and (min-width:0) and (max-width:576px) {
+    .navbar-collapse{
+        background-color: rgb(47, 3, 88);
+        display: flex;
+        justify-content: center !important;
+
+    }
+}
