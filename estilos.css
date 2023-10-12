@@ -1,53 +1,234 @@
-.navbar{
-    height: 100px;
-    background-color: rgb(23, 155, 153);
+/* Fuente 1 Artega*/
+@font-face {
+    font-family: 'Artega';
+    src: url('/font/Artega.otf');
 }
 
-.navbar-brand img{
-    height: 60px;
+/* Fuente 2 Webrush*/
+@font-face {
+    font-family: 'Webrush';
+    src: url('/font/Webrush\ Demo.ttf');
+}
 
+/* Fuente 3 CeraRounBasic*/
+@font-face {
+    font-family: 'CeraRounBasic';
+    src: url('/font/CeraRoundBasic-Black.otf');
 }
-.nav-link{
-    color: yellow !important
+@font-face {
+    font-family: 'CeraRounBasic';
+    src: url('/font/CeraRoundBasic-Bold.otf');
 }
-.jumbotron{
-    height: 400px;
+@font-face {
+    font-family: 'CeraRounBasic';
+    src: url('/font/CeraRoundBasic-Light.otf');
+}
+
+@font-face {
+    font-family: 'CeraRounBasic';
+    src: url('/font/CeraRoundBasic-Medium.otf');
+}
+
+@font-face {
+    font-family: 'CeraRounBasic';
+    src: url('/font/CeraRoundBasic-Regular.otf');
+}
+
+@font-face {
+    font-family: 'CeraRounBasic';
+    src: url('/font/CeraRoundBasic-Thin.otf');
+}
+/* Estilos para el jumbotron */
+.jumbotron-custom {
+    height: 100vh; /* Ajusta la altura al 100% de la ventana gráfica */
     width: 100%;
-    background-image: url(img/pexels-andré-ulysses-de-salis-3727271.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: url(img/Principal.png);
+    background-size:cover;
+    background-position:bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido en la parte superior del jumbotron */
+    align-items: center;
+    text-align: center; /* Centra el contenido horizontalmente */
+    padding-top: 0; /* Espacio en la parte superior del jumbotron */
 }
+/* Estilos para el navbar dentro del jumbotron */
+.navbar-custom {
+    position: absolute; /* Establece la posición a absoluta */
+    top: 0; /* Alinea el navbar en la parte superior del jumbotron */
+    width: 100%; /* Ocupa todo el ancho del jumbotron */
+    background-color: transparent; /* Establecer el fondo como transparente */
+    font-family: Artega;
+    font-size: small;
+    border-bottom: 2px double;
+    border-bottom-color: aliceblue;
+    border-bottom-style: solid;
+    z-index: 2; /* Añade una capa superior para que el navbar esté encima de otros elementos */
+    justify-content: space-between;
+}
+
+/* Estilos para los enlaces del navbar */
+.navbar-custom .nav-link {
+    color: aliceblue !important;
+    font-family: CeraRounBasic;
+    font-weight: Bold;
+    font-size: 25px;
+    transition: color 0.3s, text-shadow 0.3s; /* Agregar transiciones para color y sombra del texto */
+    padding: 10px 20px; /* Espaciado interno para el botón */
+    border: none; /* Quita el borde del botón */
+    border-radius: 50px; /* Forma ovalada inicial */
+}
+
+/* Agrega subrayado y cambia el color al pasar el mouse */
+.navbar-custom .nav-link:hover {
+    text-decoration: underline;
+    color: #FF5733;  /*Cambiar el color del texto al pasar el mouse */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 50%; /* Cambia la forma a ovalada al pasar el mouse */
+}
+/* Estilos para h1 y audio dentro del jumbotron */
+.jumbotron-custom h1 {
+    text-align: center;
+    margin-top: 70px; /* Aumenta el espacio superior solo para el elemento h3 */
+    font-family: CeraRounBasic;
+    font-weight:Medium;
+    font-size: 60px;
+    color: aliceblue;
+}
+.jumbotron-custom p{
+    color: aliceblue;
+    margin-top: 0px
+    font-family: CeraRounBasic;
+    font-weight: Medium;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.jumbotron-custom audio {
+    text-align: center;
+    margin: 200px 0; /* Deja el margen superior e inferior como estaba para el elemento audio */
+    width: 20%; /* Ajustar el ancho al 100% del contenedor */
+    /* Estilo para el reproductor de audio con transparencia */
+    opacity: 0.6; /* Puedes ajustar el valor de 0 a 1 (donde 1 es completamente opaco y 0 es completamente transparente) */
+}
+
+.nosotros-p {
+    /* Estilos específicos para la etiqueta <p> en la sección "Nosotros" */
+    font-family: CeraRounBasic;
+    font-weight: bold;
+    font-size: 28px; /* Cambia el tamaño de la fuente */
+    line-height: 1.5; /* Cambia el espaciado entre líneas */
+    color: rgb(133, 96, 55); /* Cambia el color del texto */
+    text-align: center;
+    /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
+    /* Otros estilos que desees aplicar */
+}
+.nosotros-img {
+    max-width: 50%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+    display: block; /* Para centrar la imagen horizontalmente */
+    margin: 0 auto; /* Centra horizontalmente la imagen */
+    border-radius: 100px; /* Agrega bordes redondeados de 10 píxeles */
+    /* Otros estilos que desees aplicar solo a esta imagen */
+}
+
+.contacto-p {
+    /* Estilos específicos para la etiqueta <p> en la sección "contacto" */
+    font-family: CeraRounBasic;
+    font-weight: bold;
+    font-size: 28px; /* Cambia el tamaño de la fuente */
+    line-height: 1.5; /* Cambia el espaciado entre líneas */
+    color: rgb(133, 96, 55); /* Cambia el color del texto */
+    text-align: center;
+    /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
+    /* Otros estilos que desees aplicar */
+}
+.contacto-img {
+    max-width: 50%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+    display: block; /* Para centrar la imagen horizontalmente */
+    margin: 0 auto; /* Centra horizontalmente la imagen */
+    border-radius: 100px; /* Agrega bordes redondeados de 10 píxeles */
+    margin-bottom: 30px;
+    /* Otros estilos que desees aplicar solo a esta imagen */
+}
+
 h1{
-    color: aliceblue;
+    color: rgb(133, 96, 55);
+    text-align: center;
+    font-family: CeraRounBasic;
+    font-weight:bold;
+    font-size: 50px;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.jumbotron p{
-    color: aliceblue;
-}
+
 h2{
     text-align: center;
-    background-color: rgb(23, 155, 153);
-    color: yellow;
+    background-color: aliceblue;
+    color: aliceblue;
     padding: 20px;
     margin-bottom: 0%;
-
-
+    font-family: CeraRounBasic;
+    font-weight: Bold;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.nleft{
-    height: 400px;
-    background-image: url(img/flamingo-4497673_1280.jpg);
-    background-size: cover;
-    background-position: center;
+h3{
+    font-family: CeraRounBasic;
+    font-size: 40px;
+    font-weight: Bold;  /* "Bold", "Light", "Medium", "Regular", o "Thin"*/
+    text-align: center;
+    color: rgb(133, 96, 55);
+    padding: 30px;
+    margin-bottom: 0%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .program{
     height: 400px;
     background-size: cover;
     background-position: center;
 }
-@media only screen and (min-width:0) and (max-width:576px) {
+
+footer{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    padding: 15px;
+}
+footer p{
+    font-size: 18px;
+}
+footer a{
+    color:aquamarine
+}
+footer i{
+    font-size: 35px;
+}
+.what{
+    height: 60px;
+    width: 60px;
+    background-color: rgb(0, 255, 127);
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    border: 2px solid #fff;
+    display:grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px #000;
+
+}
+
+
+/* background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);*/
+
+
+
+@media only screen and (min-width:0px) and (max-width:1200px) {
     .navbar-collapse{
-        background-color: rgb(47, 3, 88);
         display: flex;
-        justify-content: center !important;
+        justify-content: right !important;
 
     }
 }
