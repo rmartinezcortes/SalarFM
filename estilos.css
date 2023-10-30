@@ -53,11 +53,11 @@
     padding-top: 0; /* Espacio en la parte superior del jumbotron */
 }
 /* Estilos para el navbar dentro del jumbotron */
-.navbar-custom {
+.navbar {
     position: absolute; /* Establece la posición a absoluta */
     top: 0; /* Alinea el navbar en la parte superior del jumbotron */
     width: 100%; /* Ocupa todo el ancho del jumbotron */
-    background-color: transparent; /* Establecer el fondo como transparente */
+    background-color:transparent; /* Establecer el fondo como transparente */
     font-family: Artega;
     font-size: small;
     border-bottom: 2px double;
@@ -65,14 +65,25 @@
     border-bottom-style: solid;
     z-index: 2; /* Añade una capa superior para que el navbar esté encima de otros elementos */
     justify-content: space-between;
+    padding-right: 20px;
+}
+.navbar-collapse {
+    z-index: 2000;
+}
+.navbar-collapse{
+position: relative;
+}
+.navbar-collapse {
+    margin-top: 50px; /* o el valor que desees */
 }
 
+
 /* Estilos para los enlaces del navbar */
-.navbar-custom .nav-link {
+.navbar .nav-link {
     color: aliceblue !important;
     font-family: CeraRounBasic;
     font-weight: Bold;
-    font-size: 25px;
+    font-size: 20px;
     transition: color 0.3s, text-shadow 0.3s; /* Agregar transiciones para color y sombra del texto */
     padding: 10px 20px; /* Espaciado interno para el botón */
     border: none; /* Quita el borde del botón */
@@ -80,7 +91,7 @@
 }
 
 /* Agrega subrayado y cambia el color al pasar el mouse */
-.navbar-custom .nav-link:hover {
+.navbar .nav-link:hover {
     text-decoration: underline;
     color: #FF5733;  /*Cambiar el color del texto al pasar el mouse */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -89,10 +100,10 @@
 /* Estilos para h1 y audio dentro del jumbotron */
 .jumbotron-custom h1 {
     text-align: center;
-    margin-top: 70px; /* Aumenta el espacio superior solo para el elemento h3 */
+    margin-top: 20px; /* Aumenta el espacio superior solo para el elemento h1 */
     font-family: CeraRounBasic;
     font-weight:Medium;
-    font-size: 60px;
+    font-size: 40px;
     color: aliceblue;
 }
 .jumbotron-custom p{
@@ -100,22 +111,23 @@
     margin-top: 0px
     font-family: CeraRounBasic;
     font-weight: Medium;
-    font-size: 20px;
+    font-size: 17px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .jumbotron-custom audio {
     text-align: center;
-    margin: 200px 0; /* Deja el margen superior e inferior como estaba para el elemento audio */
-    width: 20%; /* Ajustar el ancho al 100% del contenedor */
-    /* Estilo para el reproductor de audio con transparencia */
-    opacity: 0.6; /* Puedes ajustar el valor de 0 a 1 (donde 1 es completamente opaco y 0 es completamente transparente) */
+    margin: 100px 0; /* Deja el margen superior e inferior como estaba para el elemento audio */
+    width: 20%; 
+    min-width: 200px; /* Establece el ancho mínimo del reproductor a 200px */
+    min-height: 50px; /* Establece la altura mínima del reproductor */
+    opacity: 0.6;
 }
 
 .nosotros-p {
     /* Estilos específicos para la etiqueta <p> en la sección "Nosotros" */
     font-family: CeraRounBasic;
     font-weight: bold;
-    font-size: 28px; /* Cambia el tamaño de la fuente */
+    font-size: 20px; /* Cambia el tamaño de la fuente */
     line-height: 1.5; /* Cambia el espaciado entre líneas */
     color: rgb(133, 96, 55); /* Cambia el color del texto */
     text-align: center;
@@ -134,7 +146,7 @@
     /* Estilos específicos para la etiqueta <p> en la sección "contacto" */
     font-family: CeraRounBasic;
     font-weight: bold;
-    font-size: 28px; /* Cambia el tamaño de la fuente */
+    font-size: 20px; /* Cambia el tamaño de la fuente */
     line-height: 1.5; /* Cambia el espaciado entre líneas */
     color: rgb(133, 96, 55); /* Cambia el color del texto */
     text-align: center;
@@ -162,18 +174,17 @@ h1{
 
 h2{
     text-align: center;
-    background-color: aliceblue;
-    color: aliceblue;
+    color: rgb(133, 96, 55);
     padding: 20px;
     margin-bottom: 0%;
     font-family: CeraRounBasic;
     font-weight: Bold;
-    font-size: 20px;
+    font-size: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 h3{
     font-family: CeraRounBasic;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: Bold;  /* "Bold", "Light", "Medium", "Regular", o "Thin"*/
     text-align: center;
     color: rgb(133, 96, 55);
@@ -188,10 +199,9 @@ h3{
 }
 
 footer{
-    background-color: black;
     color: aliceblue;
-    text-align: center;
-    padding: 15px;
+    /*text-align: center;*/
+
 }
 footer p{
     font-size: 18px;
@@ -202,6 +212,46 @@ footer a{
 footer i{
     font-size: 35px;
 }
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.app-footer__contact-form textarea.form-control {
+    max-height: 110px;
+}
+
+.app-footer__contact-form .form-control {
+    border-color: #343a40;
+    background-clip: border-box;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #49574e;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
 .what{
     height: 60px;
     width: 60px;
@@ -220,15 +270,19 @@ footer i{
 
 }
 
+@media only screen and (min-width: 0px) and (max-width: 1200px) {
+    .navbar-collapse {
+        position: sticky; /* Posicionar fijamente */
+        top: 0; /* Alinea en la parte superior */
+        right: 0; /* Alinea a la derecha */
+        width: 100%; /* Ocupar todo el ancho */
+        height: 100%; /* Ocupar todo el alto */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        transform: translateX(100%); /* Desplazar fuera de la pantalla */
+        transition: transform 0.3s ease-in-out; /* Transición suave para el desplazamiento */
+    }
 
-/* background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);*/
-
-
-
-@media only screen and (min-width:0px) and (max-width:1200px) {
-    .navbar-collapse{
-        display: flex;
-        justify-content: right !important;
-
+    .navbar-collapse.show {
+        transform: translateX(0); /* Desplazar dentro de la pantalla cuando esté activo */
     }
 }
